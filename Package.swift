@@ -37,14 +37,11 @@ let package = Package(
                     name: "KeyWindow",
                     package: "KeyWindow"
                 )
-            ],
-            linkerSettings: [
-                .unsafeFlags(["-ObjC"])
             ]
+        ),
+        .testTarget(
+            name: "AdMobUITests",
+            dependencies: ["AdMobUI"]
         )
-//        .testTarget(
-//            name: "AdMobUITests",
-//            dependencies: ["AdMobUI"]
-//        ),
     ]
 )
