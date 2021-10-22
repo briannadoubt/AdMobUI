@@ -128,6 +128,6 @@ extension InlineAdViewController: GADBannerViewDelegate {
 
 struct InlineAd_Previews: PreviewProvider {
     static var previews: some View {
-        InlineAd(ad: TaroAd.library, width: .constant(320), height: .constant(320), maxHeight: 320)
+        InlineAd(ad: DemoAd.inline, width: .constant(320), height: .constant(320), maxHeight: 320)
     }
 }

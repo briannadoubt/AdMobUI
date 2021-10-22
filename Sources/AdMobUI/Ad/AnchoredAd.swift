@@ -108,6 +108,6 @@ class AnchoredAdViewController: UIViewController {
 
 struct Advertisement_Previews: PreviewProvider {
     static var previews: some View {
-        AnchoredAd(ad: TaroAd.library)
+        AnchoredAd(ad: DemoAd.anchored)
     }
 }
