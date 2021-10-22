@@ -62,7 +62,7 @@ AdMobUI also pulls `GoogleMobileAdsSDK` through an unofficial swift package in o
 
 Search for https://github.com/briannadoubt/AdMobUI in `Xcode -> File -> Add Packages...` or add the following to the dependancies your `Package.swift` file:
 
-```
+```swift
 // swift-tools-version:5.5
 
 import PackageDescription
