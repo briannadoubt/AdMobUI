@@ -38,10 +38,10 @@ let package = Package(
                     package: "KeyWindow"
                 )
             ]
-        ),
-        .testTarget(
-            name: "AdMobUITests",
-            dependencies: ["AdMobUI"]
-        )
+        )//,
+//        .testTarget(
+//            name: "AdMobUITests",
+//            dependencies: ["AdMobUI"]
+//        )
     ]
 )
