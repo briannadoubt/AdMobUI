@@ -56,7 +56,7 @@ struct ContentView: View {
 
 AdMobUI only support iOS since the `GoogleMobileAdsSDK` doesn't support any other operating system.
 
-AdMobUI also pulls `GoogleMobileAdsSDK` through an unofficial swift package in order to avoid using `cocoapods`. There are known issues when archiving your product. More info here:  
+AdMobUI also pulls `GoogleMobileAdsSDK` through an unofficial swift package in order to avoid using `cocoapods`. There are known issues when archiving your product. More info here: https://github.com/quanghits/GoogleMobileAds
 
 ## Installation
 
