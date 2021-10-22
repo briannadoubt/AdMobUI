@@ -8,6 +8,7 @@
 import GoogleMobileAds
 import SwiftUI
 import UIKit
+import KeyWindow
 
 struct AnchoredAd: View {
     

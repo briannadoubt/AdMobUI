@@ -1,5 +1,4 @@
-// swift-tools-version:5.5
-// The swift-tools-version declares the minimum version of Swift required to build this package.
+// swift-tools-version:5.4
 
 import PackageDescription
 
@@ -9,22 +8,23 @@ let package = Package(
         .iOS(.v14)
     ],
     products: [
-        // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
             name: "AdMobUI",
             targets: ["AdMobUI"]),
     ],
     dependencies: [
-        // Dependencies declare other packages that this package depends on.
         .package(
             name: "GoogleMobileAds",
             url: "https://github.com/quanghits/GoogleMobileAds.git",
             .upToNextMajor(from: "8.12.0")
         ),
+        .package(
+            name: "KeyWindow",
+            url: "https://github.com/briannadoubt/KeyWindow.git",
+            .upToNextMajor(from: "0.1.0")
+        )
     ],
     targets: [
-        // Targets are the basic building blocks of a package. A target can define a module or a test suite.
-        // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
             name: "AdMobUI",
             dependencies: [
@@ -32,11 +32,19 @@ let package = Package(
                     name: "GoogleMobileAds",
                     package: "GoogleMobileAds",
                     condition: .when(platforms: [.iOS])
+                ),
+                .product(
+                    name: "KeyWindow",
+                    package: "KeyWindow"
                 )
+            ],
+            linkerSettings: [
+                .unsafeFlags(["-ObjC"])
             ]
-        ),
-        .testTarget(
-            name: "AdMobUITests",
-            dependencies: ["AdMobUI"]),
+        )
+//        .testTarget(
+//            name: "AdMobUITests",
+//            dependencies: ["AdMobUI"]
+//        ),
     ]
 )

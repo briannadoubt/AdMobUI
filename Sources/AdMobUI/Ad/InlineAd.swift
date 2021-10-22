@@ -78,7 +78,7 @@ class InlineAdViewController: UIViewController {
         bannerView?.frame.origin.y -= 1
         bannerView?.delegate = self
         bannerView?.adUnitID = ad.unitId
-        bannerView?.validAdSizes = [NSValueFromGADAdSize(kGADAdSizeBanner)]
+        bannerView?.validAdSizes = [NSValueFromGADAdSize(GADAdSizeBanner)]
         bannerView?.rootViewController = self
         bannerView?.clipsToBounds = true
         if let bannerView = bannerView {
