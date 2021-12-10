@@ -4,6 +4,7 @@ import PackageDescription
 
 let package = Package(
     name: "AdMobUI",
+    platforms: [.iOS(.v14)],
     products: [
         .library(
             name: "AdMobUI",
@@ -13,7 +14,7 @@ let package = Package(
         .package(
             name: "GoogleMobileAds",
             url: "https://github.com/quanghits/GoogleMobileAds.git",
-            .upToNextMajor(from: "8.12.0")
+            .upToNextMajor(from: "8.13.0")
         ),
         .package(
             name: "KeyWindow",
@@ -32,8 +33,13 @@ let package = Package(
                 ),
                 .product(
                     name: "KeyWindow",
-                    package: "KeyWindow"
+                    package: "KeyWindow",
+                    condition: .when(platforms: [.iOS])
                 )
+            ],
+            linkerSettings: [
+                .linkedFramework("SwiftUI", .when(platforms: [.iOS])),
+                .linkedFramework("Foundation", .when(platforms: [.iOS]))
             ]
         )//,
 //        .testTarget(

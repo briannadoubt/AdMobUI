@@ -1,6 +1,6 @@
 //
 //  AnchoredAd.swift
-//  Taro
+//  AdMobUI
 //
 //  Created by Brianna Zamora on 9/15/21.
 //
@@ -10,14 +10,14 @@ import SwiftUI
 import UIKit
 import KeyWindow
 
-struct AnchoredAd: View {
+public struct AnchoredAd: View {
     
-    @AppStorage("showingAds") var showingAds: Bool = true
+    @AppStorage("showingAds") private var showingAds: Bool = true
     
     let ad: Advertisement
     
-    @State var height: CGFloat = 320
-    @State var width: CGFloat = 320
+    @State public var height: CGFloat = 320
+    @State public var width: CGFloat = 320
     
     func update(size: CGSize) {
         self.height = size.height
@@ -107,8 +107,8 @@ class AnchoredAdViewController: UIViewController {
     }
 }
 
-struct Advertisement_Previews: PreviewProvider {
+struct AnchoredAd_Previews: PreviewProvider {
     static var previews: some View {
-        AnchoredAd(ad: DemoAd.anchored)
+        AnchoredAd(ad: PreviewAd.anchoredPreview)
     }
 }
