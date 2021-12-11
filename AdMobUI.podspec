@@ -5,7 +5,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'AdMobUI'
-  s.version          = '1.0.0'
+  s.version          = '1.0.1'
   s.summary          = 'A simple SwiftUI wrapper for AdMob Banner Ads (in a cocoapod...).'
 
   s.description      = <<-DESC
