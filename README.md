@@ -60,6 +60,10 @@ AdMobUI also pulls `GoogleMobileAdsSDK` through an unofficial swift package in o
 
 ## Installation
 
+If you want to use Swift Package Manager, you can't use mediation groups that support third party SDKs with this library. If you need to incorporate ad partner SDKs, please use the Cocoapods installation and follow Google's recommended installation via their official documentation.
+
+### Swift Package Manager
+
 Search for https://github.com/briannadoubt/AdMobUI in `Xcode -> File -> Add Packages...` or add the following to the dependancies your `Package.swift` file:
 
 ```swift
@@ -96,9 +100,11 @@ let package = Package(
 
 Add the ad network stuff from Google into your Into.plist:
 
+Depending on you ad sources in your mediation groups you'll need to incorporate additional SKAdNetworkIdentifiers in your info.plist. But, if you are only utilizing AdMob incorporated mediation group partners (either using Cocoapods _without_ third party SDKs, or using SPM), the following plist file will suffice. Check your app's logs for missing SKAdNetworkIdentifiers and add them as needed.
+
 ```xml
 <key>GADApplicationIdentifier</key>
-<string>ca-app-pub-3940256099942544~1458002511</string>
+<string>YOUR APP ID</string>
 <key>SKAdNetworkItems</key>
 <array>
     <dict>
