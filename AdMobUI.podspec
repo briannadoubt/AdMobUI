@@ -26,8 +26,4 @@ AdMobUI simplifies the implementation of AdMob ads in your iOS app. See the read
   
   s.dependency 'Google-Mobile-Ads-SDK'
   
-  s.dependency 'GoogleMobileAdsMediationAdColony'
-  s.dependency 'GoogleMobileAdsMediationAppLovin'
-  s.dependency 'GoogleMobileAdsMediationFacebook'
-  s.dependency 'GoogleMobileAdsMediationTestSuite'
 end

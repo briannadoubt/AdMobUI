@@ -9,6 +9,7 @@ import GoogleMobileAds
 import SwiftUI
 import UIKit
 import KeyWindow
+import AppTrackingTransparency
 
 public struct AnchoredAd: View {
     
