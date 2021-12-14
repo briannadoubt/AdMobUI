@@ -6,12 +6,15 @@
 //
 
 import SwiftUI
-import GoogleMobileAds
+
 @_exported import AppTrackingTransparency
 
 #if canImport(FirebaseCrashlytics)
 import FirebaseCrashlytics
 #endif
+
+#if canImport(GoogleMobileAds)
+import GoogleMobileAds
 
 public struct AdMobUI {
     
@@ -58,3 +61,4 @@ public struct AdMobUI {
         }
     }
 }
+#endif

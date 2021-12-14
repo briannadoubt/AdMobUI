@@ -52,15 +52,15 @@ struct ContentView: View {
 }
 ``` 
 
-## Discussion
+## Installation
 
 AdMobUI only support iOS since the `GoogleMobileAdsSDK` doesn't support any other operating system.
 
 AdMobUI also pulls `GoogleMobileAdsSDK` through an unofficial swift package in order to avoid using `cocoapods`. There are known issues when archiving your product. More info here: https://github.com/quanghits/GoogleMobileAds
 
-## Installation
+### Discussion
 
-If you want to use Swift Package Manager, you can't use mediation groups that support third party SDKs with this library. If you need to incorporate ad partner SDKs, please use the Cocoapods installation and follow Google's recommended installation via their official documentation.
+If you want to use Swift Package Manager, you can't use mediation groups that support third party SDKs with this library. If you need to incorporate ad partner SDKs, you must use the Cocoapods installation and follow Google's recommended installation via their official documentation.
 
 ### Swift Package Manager
 
@@ -98,7 +98,15 @@ let package = Package(
 )
 ```
 
-Add the ad network stuff from Google into your Into.plist:
+### Cocoapods
+
+Add this repo and Google Mobile Ads to your Podfile and run `pod install` per usual.
+```
+pod 'GoogleMobileAdsSDK'
+pod 'AdMobUI'
+```
+
+## Info.plist Configuration
 
 Depending on you ad sources in your mediation groups you'll need to incorporate additional SKAdNetworkIdentifiers in your info.plist. But, if you are only utilizing AdMob incorporated mediation group partners (either using Cocoapods _without_ third party SDKs, or using SPM), the following plist file will suffice. Check your app's logs for missing SKAdNetworkIdentifiers and add them as needed.
 

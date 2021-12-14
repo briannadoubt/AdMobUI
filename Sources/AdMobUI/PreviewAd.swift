@@ -7,6 +7,7 @@
 
 import Foundation
 
+#if canImport(GoogleMobileAds)
 enum PreviewAd: Advertisement {
     
     case inlinePreview
@@ -30,3 +31,4 @@ enum PreviewAd: Advertisement {
         }
     }
 }
+#endif

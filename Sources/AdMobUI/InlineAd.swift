@@ -6,8 +6,11 @@
 //
 
 import SwiftUI
+#if canImport(GoogleMobileAds)
 import GoogleMobileAds
+#endif
 
+#if canImport(GoogleMobileAds)
 public struct InlineAd: View {
     
     @AppStorage("showingAds") private var showingAds: Bool = true
@@ -145,3 +148,4 @@ struct InlineAd_Previews: PreviewProvider {
         InlineAd(ad: PreviewAd.inlinePreview)
     }
 }
+#endif

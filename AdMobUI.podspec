@@ -18,12 +18,13 @@ AdMobUI simplifies the implementation of AdMob ads in your iOS app. See the read
   s.source           = { :git => 'https://github.com/briannadoubt/AdMobUI.git', :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/briannadoubt'
 
+  s.swift_versions = '5.5'
   s.ios.deployment_target = '14.0'
 
   s.source_files = 'Sources/**/*'
   
   s.frameworks = 'SwiftUI'
   
-  s.dependency 'Google-Mobile-Ads-SDK'
+  s.dependency 'KeyWindow'
   
 end

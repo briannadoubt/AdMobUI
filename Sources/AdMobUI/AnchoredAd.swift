@@ -5,12 +5,17 @@
 //  Created by Brianna Zamora on 9/15/21.
 //
 
-import GoogleMobileAds
 import SwiftUI
 import UIKit
-import KeyWindow
 import AppTrackingTransparency
 
+import KeyWindow
+
+#if canImport(GoogleMobileAds)
+import GoogleMobileAds
+#endif
+
+#if canImport(GoogleMobileAds)
 public struct AnchoredAd: View {
     
     @AppStorage("showingAds") private var showingAds: Bool = true
@@ -113,3 +118,4 @@ struct AnchoredAd_Previews: PreviewProvider {
         AnchoredAd(ad: PreviewAd.anchoredPreview)
     }
 }
+#endif
